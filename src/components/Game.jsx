@@ -3,7 +3,7 @@ function Game() {
   const [num1, setNum1] = useState(Math.floor(Math.random()*100));
   const [num2, setNum2] = useState(Math.floor(Math.random()*100));
   const [ans, setAns] = useState(0)
-  const [correct,isCorrect]=useState(true);
+  const [correct,isCorrect]=useState(false);
   const newQuestion=()=>{
     setNum1((Math.floor(Math.random()*100)))
     setNum2((Math.floor(Math.random()*100)))
