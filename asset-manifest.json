@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mathgame/static/css/main.8b380f28.css",
+    "main.js": "/mathgame/static/js/main.b4607492.js",
+    "static/js/787.d4991bed.chunk.js": "/mathgame/static/js/787.d4991bed.chunk.js",
+    "index.html": "/mathgame/index.html",
+    "main.8b380f28.css.map": "/mathgame/static/css/main.8b380f28.css.map",
+    "main.b4607492.js.map": "/mathgame/static/js/main.b4607492.js.map",
+    "787.d4991bed.chunk.js.map": "/mathgame/static/js/787.d4991bed.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b380f28.css",
+    "static/js/main.b4607492.js"
+  ]
+}
