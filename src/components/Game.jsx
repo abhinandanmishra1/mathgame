@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Operations from "./Operations";
-function Game() {
+function Game(props) {
   const [operation,changeOperation]=useState('+');
   return (
     <div className='w-full flex md:flex-row flex-col'>
@@ -14,7 +14,7 @@ function Game() {
         </div>
       </div>
       <div className="w-full md:w-2/3 flex flex-col justify-center md:items-start items-center min-h-screen">
-        <Operations operation={operation}/>
+        <Operations operation={operation} name={props.name}/>
       </div>
     </div>
   )
