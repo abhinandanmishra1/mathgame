@@ -33,13 +33,13 @@ function Opeartions(props) {
       ?
       
       <div className='flex flex-col justify-center items-center'>
-        <h3 className='text-green-800 text-xl font-bold m-2'>Wow! {props.name} You're Correct. <span className='border-b-2 text-blue-500'>Streak : {count}</span> </h3>
+        <h3 className='text-green-800 md:text-xl text-center text-lg font-bold m-2'>Wow! {props.name} You're Correct. <span className='border-b-2 text-blue-500'>Streak : {count}</span> </h3>
         
         {!ask?
           <>
-          <p className=' text-center text-2xl'>{num1}</p>
-          <p className='border-b-2 border-black text-center text-2xl w-full'>{props.operation} {num2}</p>
-          <input type="text" id="inputVal" placeholder='Write Your Answer' className='border-b-2 border-black text-lg outline-none text-center text-2xl p-2 w-full' onInput={(event)=>{
+          <p className=' text-center md:text-2xl text-xl'>{num1}</p>
+          <p className='border-b-2 border-black text-center md:text-2xl text-xl w-2/3 '>{props.operation} {num2}</p>
+          <input type="text" id="inputVal" placeholder='Write Your Answer' className='border-b-2 border-black text-lg outline-none text-center md:text-xl p-2 w-2/3 ' onInput={(event)=>{
               if((operation(num1,num2))==event.target.value){
                 // I have to check only both the strings are equal or not 
                 // that's why using ==
@@ -65,10 +65,10 @@ function Opeartions(props) {
       
       :
       <div>
-        <h1 className="text-3xl font-bold text-red-600 mb-5">Let's Play the Game!</h1>
+        <h1 className="md:text-3xl text-xl font-bold text-red-600 mb-5">Let's Play the Game!</h1>
         
-          <p className=' text-center text-2xl'>{num1}</p>
-          <p className='border-b-2 border-black text-center text-2xl'>{props.operation} {num2}</p>
+          <p className=' text-center md:text-2xl text-xl'>{num1}</p>
+          <p className='border-b-2 border-black text-center md:text-2xl text-xl'>{props.operation} {num2}</p>
           <input type="text"  placeholder='Write Your Answer' className='border-b-2 border-black text-lg outline-none text-center text-2xl p-2 w-full' onInput={(event)=>{
                if((operation(num1,num2))==event.target.value){
                 // I have to check only both the strings are equal or not 

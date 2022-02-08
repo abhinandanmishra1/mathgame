@@ -13,12 +13,12 @@ function EnterGame() {
                 </>
                 :
                  <div className="flex flex-col justify-center items-center min-h-screen">
-                    <h1 className="text-3xl font-bold text-green-600">Welcome to to the Maths Mastery game(-_-)</h1>
+                    <h1 className="md:text-3xl text-2xl text-center font-bold text-green-600">Welcome to to the Maths Mastery game(-_-)</h1>
                     {
                         // next?
                         <>
-                            <label className='m-2 text-2xl' htmlFor="name">What is your name?</label>
-                            <input type="text" id='name' className='text-lg p-2 outline-none text-center' onChange={(event)=>changeName(event.target.value)} placeholder="Name Here" />
+                            <label className='m-2 md:text-2xl text-xl' htmlFor="name">What is your name?</label>
+                            <input type="text" id='name' className='md:text-lg text-base p-2 outline-none text-center' onChange={(event)=>changeName(event.target.value)} placeholder="Name Here" />
                             {/* <button onClick={()=>Next(false)} className="customButton">Next</button>
                         </>
                     :
