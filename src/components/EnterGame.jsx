@@ -6,13 +6,13 @@ function EnterGame() {
       const[name,changeName]=useState('');  // Getting name of player
       const[numQuestions,questions]=useState(1);  // Getting questions count
       const[next,Next]=useState(true);  // Getting name of player
-       return <div className="flex flex-col justify-center items-center min-h-screen">
+       return <>
         {   start? 
                 <>
 			        <Game name={name} count={numQuestions} />
                 </>
                 :
-                 <>
+                 <div className="flex flex-col justify-center items-center min-h-screen">
                     <h1 className="text-3xl font-bold text-green-600">Welcome to to the Maths Mastery game(-_-)</h1>
                     {
                         // next?
@@ -29,9 +29,9 @@ function EnterGame() {
                         </>
                     }
                     
-                </>
+                </div>
         }
-    </div>
+    </>
 }
 
 export default EnterGame;
