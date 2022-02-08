@@ -1,4 +1,5 @@
 # Math Game
+### Watch [Live](https://abhinandanmishra1.github.io/mathgame/)
 
 This project is for increasing sharpness in mathematical calculation.
 
@@ -32,4 +33,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
     Will be updated here
 
-### Watch [Live](https://abhinandanmishra1.github.io/mathgame/)
+

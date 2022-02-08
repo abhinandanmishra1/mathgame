@@ -3,13 +3,16 @@ function Game(props) {
   const [num1, setNum1] = useState(Math.floor(Math.random()*100));
   const [num2, setNum2] = useState(Math.floor(Math.random()*100));
   const [correct,isCorrect]=useState(false);
-  const [count,setCount]=useState(props.count);
+  const [ask,toAsk]=useState(false);
+  const [count,setCount]=useState(0);
+
   const newQuestion=()=>{
     setNum1((Math.floor(Math.random()*100)))
     setNum2((Math.floor(Math.random()*100)))
     
     isCorrect(false)
-    count==0?setCount(props.count):setCount(count-1);
+    
+    
     
     
   }
@@ -20,16 +23,18 @@ function Game(props) {
       ?
       
       <div className='flex flex-col justify-center items-center'>
-        <h3 className='text-green-800 text-xl font-bold m-2'>Wow! {props.name} You're Correct.</h3>
-        {(count>0)?
+        <h3 className='text-green-800 text-xl font-bold m-2'>Wow! {props.name} You're Correct. <span className='border-b-2 text-blue-500'>Streak : {count}</span> </h3>
+        {!ask?
           <>
-          <p className=' text-right'>{num1}</p>
-          <p className='border-b-2 text-right'>+ {num2}</p>
-          <input type="text"  className='text-lg outline-none text-right w-full' onInput={(event)=>{
+          <p className=' text-center text-2xl'>{num1}</p>
+          <p className='border-b-2 border-black text-center text-2xl w-full'>+ {num2}</p>
+          <input type="text" placeholder='Write Your Answer' className='border-b-2 border-black text-lg outline-none text-center text-2xl p-2 w-full' onInput={(event)=>{
               if((num1+num2)==event.target.value){
                 // I have to check only both the strings are equal or not 
                 // that's why using ==
-                  isCorrect(true)
+                setCount(count+1);
+                newQuestion();
+                isCorrect(true)
               }
           }} />
           </>:
@@ -41,13 +46,16 @@ function Game(props) {
       
       :
       <div>
-        <h1 className="text-3xl font-bold text-red-600">Let's Play the game!</h1>
-          <p className=' text-right'>{num1}</p>
-          <p className='border-b-2 text-right'>+ {num2}</p>
-          <input type="text"  className='text-lg outline-none text-right w-full' onInput={(event)=>{
+        <h1 className="text-3xl font-bold text-red-600 mb-5">Let's Play the game!</h1>
+          <p className=' text-center text-2xl'>{num1}</p>
+          <p className='border-b-2 border-black text-center text-2xl'>+ {num2}</p>
+          <input type="text"  placeholder='Write Your Answer' className='border-b-2 border-black text-lg outline-none text-center text-2xl p-2 w-full' onInput={(event)=>{
               if((num1+num2)==event.target.value){
                 // I have to check only both the strings are equal or not 
                 // that's why using ==
+                  newQuestion();
+                setCount(count+1);
+                  event.currentTarget.value=null;
                   isCorrect(true)
               }
           }} />
